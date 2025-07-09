@@ -1,5 +1,5 @@
 // src/app/api/transactions/route.js
-import { connectToDatabase } from '@/lib/mongodb';
+import { connectToDatabase } from '../../lib/mongodb';
 import Transaction from '@/models/transaction';
 
 export async function GET(req) {
