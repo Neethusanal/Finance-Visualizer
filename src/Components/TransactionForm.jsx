@@ -26,7 +26,7 @@ export default function TransactionForm() {
     });
 
     if (res.ok) {
-      setForm({ amount: '', date: '', description: '' });
+      setForm({ title: ' ',amount: '', date: '', description: '' });
       alert('Transaction added!');
     } else {
       alert('Something went wrong');
@@ -37,6 +37,17 @@ export default function TransactionForm() {
     <Card className="max-w-md mx-auto mt-6">
       <CardContent className="p-6">
         <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <Label htmlFor="amount">Title</Label>
+            <Input
+              id="title"
+              name="title"
+              type="string"
+              value={form.title}
+              onChange={handleChange}
+              required
+            />
+          </div>
           <div>
             <Label htmlFor="amount">Amount</Label>
             <Input
