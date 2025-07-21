@@ -10,7 +10,7 @@ export default function TransactionsTable() {
       .then(res => res.json())
       .then(data => setTransactions(data));
   }, []);
-
+console.log(transactions,"jjjj")
   return (
     // <div className="p-4">
     //   <h2 className="text-xl font-semibold mb-4">Transaction History</h2>
